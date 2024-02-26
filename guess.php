@@ -3,36 +3,6 @@
 <head>
 <title>Guessing Game for Preetam Kumar </title>
 </head>
-<style>
-.calc-display{
-margin:10px;
-color:white;
-background-color:black;
-border-radius:8px;
-text-align:center;
-width:540px;
-height:200px;
-}
-input,select{
-margin:8px;
-padding:8px;
-border:3px solid black;
-border-radius:8px;
-font-size:25px;
-}
-.calc{
-margin:auto;
-border:5px solid black;
-border-radius:8px;
-width:560px;
-height:500px;
-}
-#guess{margin-top:20px;}
-#submit{
-margin-top:50px;
-}
-
-</style>
 <body>
 <?php
 $ans=0;
@@ -59,9 +29,9 @@ if($_SERVER['REQUEST_METHOD']=='GET' && $_GET['submit']){
 ?>
 
 <div class="calc">
-<h1 style="padding-left:30px">Welcome to my guessing game</h1>
+<h1>Welcome to my guessing game</h1>
 <form action="<?=$_SERVER['PHP_SELF'] ?>" method="GET">
- <div class="calc-display">
+ <div>
 <h1> You Guessed : <?= number_format($ans,2) ?></h1>
 <h1><?= $msg ?></h1>
 </div>
